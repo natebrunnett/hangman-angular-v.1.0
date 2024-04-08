@@ -1,0 +1,27 @@
+<h1 class="text-center text-3xl text-purple-500 font-bold animate-pulse mt-3">Hang Man</h1>
+<div *ngIf="!isGameOver()">
+    <app-word-display [word]="word" [guessedLetters]="guessedLetters"></app-word-display>
+    <div class="mb-4 text-center text-xl">Attempts left: {{ attemptsLeft }}</div>
+    <div class="flex flex-wrap justify-center">
+      <ng-container *ngFor="let letter of 'abcdefghijklmnopqrstuvwxyz'.split('')">
+        <button 
+          class="text-white px-4 py-2 m-1 border border-gray-300 rounded-lg"
+          (click)="guess(letter)" 
+          [disabled]="guessedLetters.includes(letter)">
+          {{ letter }}
+        </button>
+      </ng-container>
+    </div>
+</div>
+<div 
+class="flex flex-col items-center justify-center"
+*ngIf="isWordGuessed()">
+    <h2 class="text-3xl mt-3 mb-3">Congratulations! You guessed the word!</h2>
+    <button class="btn-primary" (click)="resetGame()">Play Again</button>
+</div>
+<div 
+class="flex flex-col items-center justify-center"
+*ngIf="!isWordGuessed() && attemptsLeft === 0">
+    <h2 class="text-3xl mt-3 mb-3">Game Over! The word was "{{ word }}"</h2>
+    <button class="btn-primary" (click)="resetGame()">Try Again</button>
+</div>
