@@ -1,6 +1,22 @@
-# HangManV2
+# HangManV1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+
+# Developer Note
+
+Hi everyone! This is hangman in angular with tailwindcss for styling.  The app features modules and components that have variables passed betweem them.
+
+To clone and run this project.  Here are the commands
+
+    $ git clone ...git link...
+    $ cd hangman-angular-v.1.0 & npm i
+    $ npm install -g @angular/cli //make sure to have angular installed globally
+    $ ng serve
+    vist http://localhost:4200/ to view the hangman application
+
+Angular set up documentation for beginner developers
+
+    https://angular.io/guide/setup-local
 
 ## Development server
 
