@@ -9,7 +9,7 @@ Hi everyone! This is hangman in angular with tailwindcss for styling.  The app f
 To clone and run this project.  Here are the commands
 
     $ git clone ...git link...
-    $ cd hangman-angular-v.1.0 & npm i
+    $ cd hangman-angular-v.1.0 && npm i
     $ npm install -g @angular/cli //make sure to have angular installed globally
     $ ng serve
     vist http://localhost:4200/ to view the hangman application
